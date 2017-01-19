@@ -1,10 +1,6 @@
-<?php
-/**
- * @package WordPress
- * @subpackage YOUR_THEME
- */
-?>
-	<div id="sidebar">
-
-	</div> <!-- sidebar -->
-
+<aside>
+    <h2>Archives</h2>
+    <ol>
+		<?php wp_get_archives( 'type=monthly' ); ?>
+    </ol>
+</aside>

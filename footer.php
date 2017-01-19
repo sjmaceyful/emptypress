@@ -1,25 +1,15 @@
-<?php
-/**
- * @package WordPress
- * @subpackage YOUR_THEME
- */
-?>
+<footer class="site-footer">
+    <div class="inner">
+		<?php wp_nav_menu( array(
+			'theme_location' => 'footer'
+		) ); ?>
+        <small>&copy; <?php echo date( "Y" ) . ' ' . esc_html( get_bloginfo( 'name' ) ) . ' All Rights Reserved.' ?></small>
+    </div>
+</footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="<?php bloginfo('template_path'); ?>/inc/js/libs/jquery-1.8.1.min.js"><\/script>')</script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/scripts/dist/global.min.js"></script>
 
-        <script src="<?php bloginfo('template_url'); ?>/inc/js/main.min.js"></script>
+<?php wp_footer(); ?>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-
-        <?php wp_footer(); ?>
-
-    </body>
-
+</body>
 </html>

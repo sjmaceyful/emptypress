@@ -1,16 +1,10 @@
-<?php
-/**
- * @package WordPress
- * @subpackage YOUR_THEME
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+    <article>
+        <h1><?php _e( 'Not Found', 'curzon_wordy' ); ?></h1>
+        <p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'curzon_wordy' ); ?></p>
+		<?php get_search_form(); ?>
+    </article>
 
-	<h2 class="center">Error 404 - Not Found</h2>
-
-<?php 
-get_sidebar(); ?>
-
-<?php 
-get_footer(); ?>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
